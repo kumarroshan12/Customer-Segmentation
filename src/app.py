@@ -6,6 +6,7 @@ from utils import *
 
 st.set_page_config(page_title="Automobile Customer Segmentation", layout="wide")
 
+
 # Add project descriptions
 st.title("Customer Segmentation Classification")
 st.markdown("This is a Streamlit deployment of a customer segmentation model trained on [Kaggle's Customer Segmentation Classification Dataset](https://www.kaggle.com/datasets/kaushiksuresh147/customer-segmentation?select=Train.csv).")
@@ -82,6 +83,7 @@ if st.button("Submit"):
     num_df = pd.DataFrame(scaled_inputs)
 
     # Create a numpy array of zeroes equal to the number of encoded features
+
     # and the number of onehot encoded features
     num_professions = len(set(encodings['Profession'].values()))
     num_onehot_encoded_features = 1
@@ -104,6 +106,7 @@ if st.button("Submit"):
     predict_df = pd.concat([num_df, cat_df.add_suffix('_2')], axis=1)
 
     # Rename columns to match the original column names
+    
     cols = predict_df.columns.tolist()
     new_columns = [i for i in columns]
     predict_df.columns = new_columns
@@ -111,4 +114,5 @@ if st.button("Submit"):
     # Use the model to make a prediction
     prediction = model.predict(predict_df)
     st.write("This customer is predicted to belong to Segment", prediction[0], ": ", segment_descriptions.loc[prediction[0]])
+
 
