@@ -18,7 +18,6 @@ The dataset used for this project includes the following features:
 - `Var_1`: Categorical variable
 - `Segmentation`: Target variable (A, B, C, D)
 
-**Source**: [Add link here if applicable]
 
 ---
 
