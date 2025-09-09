@@ -79,7 +79,7 @@ Edit
 
 ## 📈 Results
 
-- Achieved **X% accuracy** with Random Forest (Replace with your actual score)
+- Achieved **86% accuracy** with Random Forest (Replace with your actual score)
 - Identified key features influencing segmentation: `Spending_Score`, `Age`, `Profession`, etc.
 
 ---
